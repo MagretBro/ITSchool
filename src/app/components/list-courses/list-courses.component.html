@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <button mat-raised-button>+Add</button>
+</mat-toolbar>
+
+
+<!--  <div class="course-container" *ngFor="let a of courseList.courses;">-->
+
+<div class="main">
+  <div class="course" *ngFor="let a of courseList.courses;" (click)="openDialog(a)">
+
+  <div class="course">
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image" ></div>
+          <mat-card-title class="ptext">ОБУЧЕНИЕ {{a.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p class="ptext">
+            Наши курсы рассчитаны на любой уровень! Занятия в индивидуальном графике. Только у нас -  Трудоустройство сразу после защиты диплома.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Читать подробнее</button>
+          <button mat-button>Записаться</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+

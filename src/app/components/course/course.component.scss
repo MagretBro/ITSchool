@@ -1,0 +1,53 @@
+.main {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day-of-week-container {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0; /* Отступ между названием курса и днями недели */
+}
+
+.day-of-week {
+  margin: 0;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  justify-content: center;
+}
+
+.day-selected {
+  border: 1px solid #000;
+  color: #7a558a;
+}
+
+.student-list {
+  margin: 20px 0px;
+}
+
+.student-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.student-list li {
+  padding: 5px 0;
+}
+
+.mat-dialog-actions {
+  margin-top: 20px; /* Отступ сверху для кнопки закрытия */
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-button-toggle {
+  background-color: #7b1fa2;
+}

@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <p>students place</p>
+  <button mat-raised-button>+Add</button>
+</mat-toolbar>
+
+
+<div class="wr-main">
+  <div class="wr-list" *ngFor="let a of studentList.students;">
+    <div class="st-name">{{a.name}}</div>
+    <div class="day-of-week-container">
+      <div *ngFor="let cid of courseIds; let i = index" [ngClass]="a.courseIds?.includes(i) ? 'day-selected' : ''" class="day-of-week">{{ cid }}</div>
+<!--      <div *ngFor="let day of daysOfWeek; let i = index" [ngClass]="a.dayOfWeek?.includes(i) ? 'day-selected' : ''" class="day-of-week">{{ day }}</div>-->
+    </div>
+  </div>
+</div>
+
+

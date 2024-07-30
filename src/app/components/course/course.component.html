@@ -1,0 +1,48 @@
+<mat-toolbar>
+  <button mat-raised-button [routerLink]="['/student']">+Add student</button>
+</mat-toolbar>
+
+
+
+<div class="main">
+<h1 mat-dialog-title>КУРС: {{ data.name }}</h1>
+<div mat-dialog-content>
+  <div class="day-of-week-container">
+    <p class="day-of-week">Расписание занятий:</p>
+    <div *ngFor="let day of daysOfWeek; let i = index" [ngClass]="data.dayOfWeek?.includes(i) ? 'day-selected' : ''" class="day-of-week">
+      {{ day }}
+    </div>
+  </div>
+  <div class="students-list">
+    <p class="day-of-week">Список студентов:</p>
+    <ul>
+      <li *ngFor="let student of studentsForCourse" class="day-of-week">
+        {{ student.name}}
+      </li>
+    </ul>
+  </div>
+
+  <p class="day-of-week">Описание курса: {{ data.description }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Закрыть</button>
+</div>
+
+</div>
+
+
+
+
+<!--&lt;!&ndash;MAT DIALOG&ndash;&gt;-->
+<!--<h1 mat-dialog-title>{{ data.name }}</h1>-->
+<!--<div mat-dialog-content>-->
+<!--        <div *ngFor="let day of daysOfWeek; let i = index" [ngClass]="data.dayOfWeek?.includes(i) ? 'day-selected' : ''" class="day-of-week">-->
+<!--          {{ day }}-->
+<!--        </div>-->
+<!--&lt;!&ndash;  <p>Дни недели: {{ data.dayOfWeek.join(', ') }}</p>&ndash;&gt;-->
+<!--  <p>Описание курса: {{ data.description }}</p>-->
+<!--</div>-->
+<!--<div mat-dialog-actions>-->
+<!--  <button mat-button mat-dialog-close>Закрыть</button>-->
+<!--</div>-->
+

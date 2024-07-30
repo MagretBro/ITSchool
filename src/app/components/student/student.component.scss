@@ -1,0 +1,26 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-button-toggle {
+  background-color: #7b1fa2;
+}
+
+.day-of-week-container {
+  display: flex;
+  gap: 10px;
+}
+
+.day-of-week {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+
+.day-selected {
+  border: 1px solid #000;
+  background-color: #f0f0f0;
+}
+
