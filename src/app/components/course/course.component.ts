@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Courses, COURSELIST, DayOfWeek, STUDENTLIST, Student} from "../../data/model";
+import { CourseServiceService} from "../../service/course-service.service";
+import {Courses, DayOfWeek, Student} from "../../data/model";
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
@@ -9,14 +10,17 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 })
 export class CourseComponent implements OnInit {
   protected readonly Courses = Courses;
-  courseList = COURSELIST;
+  // courseList = COURSELIST;
   daysOfWeek: string[] = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
   studentsForCourse: Student[] = [];
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private  courseService: CourseServiceService) { }
 
   ngOnInit() {
-    this.studentsForCourse = STUDENTLIST.students.filter(student =>
+    this.studentsForCourse = this.courseService.getStudents().filter((student: Student) =>
+    // this.studentsForCourse = STUDENTLIST.students.filter(student =>
     student.courseIds?.includes(this.data.id));
     console.log(this.studentsForCourse);
   }

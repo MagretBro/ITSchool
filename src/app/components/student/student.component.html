@@ -5,7 +5,7 @@
 
 
 <div class="wr-main">
-  <div class="wr-list" *ngFor="let a of studentList.students;">
+  <div class="wr-list" *ngFor="let a of studentList;">
     <div class="st-name">{{a.name}}</div>
     <div class="day-of-week-container">
       <div *ngFor="let cid of courseIds; let i = index" [ngClass]="a.courseIds?.includes(i) ? 'day-selected' : ''" class="day-of-week">{{ cid }}</div>

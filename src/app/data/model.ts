@@ -12,31 +12,6 @@ export class Course {
 }
 
 
-// реализация класса
-export const COURSELIST: Courses = {
-  courses: [
-    {
-      id: 0,
-      name: 'Py',
-      dayOfWeek: [1,3]
-    },
-    {
-      id: 1,
-      name: 'C',
-      dayOfWeek: [3,4]
-    },
-    {
-      id: 2,
-      name: 'JS',
-      dayOfWeek: [1,2,3,4]
-    },
-    {
-      id: 3,
-      name: 'Java',
-      dayOfWeek: [2,4]
-    }
-  ]
-}
 
 
 export class Students {
@@ -50,31 +25,6 @@ export class Student {
   // dayOfWeek?: DayOfWeek[];
 }
 
-
-export const STUDENTLIST: Students = {
-  students: [
-  {
-    id: 11,
-    name: 'Rokki',
-    email: 'r@rr.rr',
-    courseIds: [1,2],
-    // dayOfWeek: [3,4]
-  },
-  {
-    id: 12,
-    name: 'Lo',
-    email: 'll@rr.rr',
-    courseIds: [2,3],
-    // dayOfWeek: [1,2,3,4]
-  },
-  {
-    id: 14,
-    name: 'Kol',
-    email: 'kk@rr.rr',
-    courseIds: [0],
-    // dayOfWeek: [1,3]
-  },
-]};
 
 
 
